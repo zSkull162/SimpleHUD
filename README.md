@@ -12,6 +12,8 @@ This system was developed and tested on Unity 2022.3.6. It may or may not work o
 ## Features:
 Within this package, I include prefabs for a simple version, and an "extra" version. Each prefab includes a UI menu to change the HUD's options in-game, which you may leave enabled or not. (Note: Currently there's no way to set the HUD's default position in-editor, so if you don't want HUD settings, you may want to hide the menu, and set the slider's default values.)
 
+The "simple" version of the HUD system includes the HUD canvas, and one parent object for the text. The "extra" version of the prefab includes top, bottom, left, and right side text parents. This can be seen in the [Preview video](https://youtu.be/gmYI42rgkzo) linked here and at the top of this ReadMe.
+
 ### HUD System Simple menu:
 ![Screenshot 2024-08-27 210037](https://github.com/user-attachments/assets/08740e27-6d7a-4321-80c0-da12624d427a)
 
@@ -19,3 +21,5 @@ Within this package, I include prefabs for a simple version, and an "extra" vers
 ![Screenshot 2024-08-27 211351](https://github.com/user-attachments/assets/74daf605-183b-43d2-a8e9-7a3875c218d1)
 
 By default, the HUD's options may not be what you prefer. (For now) to change the HUD's default settings, I reccommend you enter Playmode with Clientsim, set-up the sliders with your preferred options, write down what each slider's value is, then exit exit mode and type in each value for the sliders and reset buttons. For the future, I may add a script which lets you change the default values in-editor without having to type it for the sliders and reset buttons manually.
+
+If you need any help with this system, contact me through Discord. My username is "skull_z162"
