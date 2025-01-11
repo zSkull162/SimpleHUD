@@ -6,8 +6,8 @@ Preview video: https://youtu.be/gmYI42rgkzo
 ## Info:
 SimpleHUD is a HUD system I made for VRChat, because I wanted to make my own system that was easy to customize, had nice clean UI, and motion smoothing. So here it is! Free for anyone to use in their projects, and should be very simple to customize to your liking.
 
-## Important:
-This system was developed and tested on Unity 2022.3.6. It may or may not work on Unity 2019.4.31, and it should work fine on Unity 2022.3.22, but I have not tested.
+## Compatibility:
+This system was developed and tested on Unity 2022.3.6. Tested and confirmed to work on Unity 2022.3.22, no testing done for Unity 2019.4.31.
 
 ## Features:
 Within this package, I include prefabs for a simple version, and an "extra" version. Each prefab includes a UI menu to change the HUD's options in-game, or you can use the No-UI prefab variants. To change the default settings, refer to the bottom paragraph.
