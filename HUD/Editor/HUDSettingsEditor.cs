@@ -5,6 +5,7 @@ using UnityEditor;
 [CustomEditor(typeof(HUDSettings)), CanEditMultipleObjects]
 public class HUDSettingsEditor : Editor
 {
+    Color helpBoxGrey = new Color(0.71f, 0.71f, 0.71f, 1f) * 1.75f;
     #region Get Serialized Properties
     SerializedProperty hudObject;
     SerializedProperty hudAnimator;
@@ -23,6 +24,8 @@ public class HUDSettingsEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        HUDSettings script = (HUDSettings)target;
+        Color baseColor = GUI.backgroundColor;
         InspectorUtils.TitleLabel(ThemeColor.Col1, "HUD Settings", true);
 
         serializedObject.Update();
@@ -37,7 +40,13 @@ public class HUDSettingsEditor : Editor
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
         InspectorUtils.SectionLabel(ThemeColor.Col3, "Objects");
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+        EditorGUI.indentLevel += 1;
+        GUI.backgroundColor = helpBoxGrey;
+        GUILayout.Space(2);
         EditorGUILayout.PropertyField(sliders);
+        GUILayout.Space(2);
+        GUI.backgroundColor = baseColor;
+        EditorGUI.indentLevel -= 1;
         EditorGUILayout.EndVertical();
         EditorGUILayout.EndVertical();
 

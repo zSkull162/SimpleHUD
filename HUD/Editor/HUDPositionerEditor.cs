@@ -5,12 +5,6 @@ using UnityEditor;
 [CustomEditor(typeof(HUDPositioner)), CanEditMultipleObjects]
 public class HUDPositionerEditor : Editor
 {
-    SerializedProperty motionSmoothing;
-    private void OnEnable()
-    {
-        motionSmoothing = serializedObject.FindProperty("motionSmoothing");
-    }
-
     public override void OnInspectorGUI()
     {
         GUIStyle helpBox = new GUIStyle(EditorStyles.helpBox);
@@ -28,7 +22,7 @@ public class HUDPositionerEditor : Editor
         InspectorUtils.Description("This script will, <i>when in-game</i>, position the HUD in front of the player's view. However, there's also a smoothing option, which makes the HUD lag behind a little bit instead of directly following the player's head rotation.");
         EditorGUILayout.EndVertical();
         EditorGUILayout.EndVertical();
-
+        /* Don't need to be able to change Motion Smoothing fron the inspector if the UI slider or HUDDefaultSettings can change it.
         serializedObject.Update();
         EditorGUILayout.BeginVertical(helpBox);
         InspectorUtils.SectionLabel(ThemeColor.Col2, "Settings");
@@ -51,6 +45,7 @@ public class HUDPositionerEditor : Editor
         EditorGUILayout.EndVertical();
         EditorGUILayout.EndVertical();
         serializedObject.ApplyModifiedProperties();
+        */
     }
 }
 #endif

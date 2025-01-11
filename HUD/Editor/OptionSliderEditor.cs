@@ -17,45 +17,42 @@ public class OptionSliderEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        OptionSlider script = (OptionSlider)target;
+        Color baseColor = GUI.backgroundColor;
         InspectorUtils.TitleLabel(ThemeColor.Col3, "Option Slider", true);
 
         serializedObject.Update();
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-        InspectorUtils.SectionLabel(ThemeColor.Col4, "Object");
+        InspectorUtils.SectionLabel(ThemeColor.Col4, "Variables");
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
         EditorGUILayout.PropertyField(hudSettings);
-        EditorGUILayout.EndVertical();
-        EditorGUILayout.EndVertical();
-
-        EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-        InspectorUtils.SectionLabel(ThemeColor.Col5, "Event");
-        EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+        EditorGUILayout.Space();
+        EditorGUILayout.BeginHorizontal();
+        GUI.backgroundColor = Color.clear;
+        if (GUILayout.Button("?", GUILayout.Width(18))) { script.infoGroup = !script.infoGroup; }
+        GUI.backgroundColor = baseColor;
         EditorGUILayout.PropertyField(eventType);
-        EditorGUILayout.Space(2);
-        if (eventType.enumValueIndex == 0)
+        EditorGUILayout.EndHorizontal();
+        if (script.infoGroup)
         {
-            // InspectorUtils.Description(ThemeColor.Col5, "Calls \"SetPosX\" using the slider's value on HUD Settings.");
-            EditorGUILayout.HelpBox("Calls \"SetPosX\" using the slider's value on HUD Settings.", MessageType.Info);
-        }
-        else if (eventType.enumValueIndex == 1)
-        {
-            // InspectorUtils.Description(ThemeColor.Col5, "Calls \"SetPosY\" using the slider's value on HUD Settings.");
-            EditorGUILayout.HelpBox("Calls \"SetPosY\" using the slider's value on HUD Settings.", MessageType.Info);
-        }
-        else if (eventType.enumValueIndex == 2)
-        {
-            // InspectorUtils.Description(ThemeColor.Col5, "Calls \"SetDistance\" using the slider's value on HUD Settings.");
-            EditorGUILayout.HelpBox("Calls \"SetDistance\" using the slider's value on HUD Settings.", MessageType.Info);
-        }
-        else if (eventType.enumValueIndex == 3)
-        {
-            // InspectorUtils.Description(ThemeColor.Col5, "Calls \"SetScale\" using the slider's value on HUD Settings.");
-            EditorGUILayout.HelpBox("Calls \"SetScale\" using the slider's value on HUD Settings.", MessageType.Info);
-        }
-        else if (eventType.enumValueIndex == 4)
-        {
-            // InspectorUtils.Description(ThemeColor.Col5, "Calls \"SetSmooth\" using the slider's absolute value on HUD Settings.");
-            EditorGUILayout.HelpBox("Calls \"SetSmooth\" using the slider's absolute value on HUD Settings.", MessageType.Info);
+            switch (eventType.enumValueIndex)
+            {
+                case 0:
+                    EditorGUILayout.HelpBox("Calls \"SetPosX\" on HUD Settings, using the slider's value.", MessageType.Info);
+                    break;
+                case 1:
+                    EditorGUILayout.HelpBox("Calls \"SetPosY\" on HUD Settings, using the slider's value.", MessageType.Info);
+                    break;
+                case 2:
+                    EditorGUILayout.HelpBox("Calls \"SetDistance\" on HUD Settings, using the slider's value.", MessageType.Info);
+                    break;
+                case 3:
+                    EditorGUILayout.HelpBox("Calls \"SetScale\" on HUD Settings, using the slider's value.", MessageType.Info);
+                    break;
+                case 4:
+                    EditorGUILayout.HelpBox("Calls \"SetSmooth\" on HUD Settings, using the slider's absolute value.", MessageType.Info);
+                    break;
+            }
         }
         EditorGUILayout.EndVertical();
         EditorGUILayout.EndVertical();
