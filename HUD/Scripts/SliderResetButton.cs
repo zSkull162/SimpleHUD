@@ -12,13 +12,9 @@ public class SliderResetButton : UdonSharpBehaviour
     [SerializeField] private Slider slider;
     private float value;
 
-    void Start()
-    {
-        value = slider.value;
-    }
+    void Start() => value = slider.value;
 
-    public void OnClick()
-    {
+    public void OnClick() {
         slider.value = value;
         hudSettings.UpdateValues();
     }

@@ -17,8 +17,10 @@ public class HUDSettings : UdonSharpBehaviour
     private HUDPositioner hudPositioner;
     private Animator settingsAnimator;
 
-    private void Start()
-    {
+    public Color OnColor => togglesOnColor;
+    public Color OffColor => togglesOffColor;
+
+    private void Start() {
         hudPositioner = hudObject.GetComponent<HUDPositioner>();
         settingsAnimator = this.GetComponent<Animator>();
     }
@@ -32,26 +34,11 @@ public class HUDSettings : UdonSharpBehaviour
         hudPositioner.MotionSmoothing = Mathf.Abs(sliders[4].value);
     }
 
-    public void SetPosX(float value)
-    {
-        hudAnimator.SetFloat("posX", value);
-    }
-    public void SetPosY(float value)
-    {
-        hudAnimator.SetFloat("posY", value);
-    }
-    public void SetDistance(float value)
-    {
-        hudAnimator.SetFloat("distance", value);
-    }
-    public void SetScale(float value)
-    {
-        hudAnimator.SetFloat("scale", value);
-    }
-    public void SetSmoothing(float value)
-    {
-        hudPositioner.MotionSmoothing = value;
-    }
+    public void SetPosX(float value) => hudAnimator.SetFloat("posX", value);
+    public void SetPosY(float value) => hudAnimator.SetFloat("posY", value);
+    public void SetDistance(float value) => hudAnimator.SetFloat("distance", value);
+    public void SetScale(float value) => hudAnimator.SetFloat("scale", value);
+    public void SetSmoothing(float value) => hudPositioner.MotionSmoothing = value;
 
     public void ToggleHUD()
     {

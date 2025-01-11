@@ -23,15 +23,11 @@ public class HUDPositioner : UdonSharpBehaviour
         var head = localPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
 
         this.transform.position = head.position;
-        if (motionSmoothing < 20)
-        {
+        if (motionSmoothing < 20) {
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, head.rotation, 1.0f - Mathf.Exp(-motionSmoothing * Time.deltaTime));
             // this.transform.rotation = Quaternion.Lerp(this.transform.rotation, head.rotation, motionSmoothing);
         }
-        else
-        {
-            this.transform.rotation = head.rotation;
-        }
+        else this.transform.rotation = head.rotation;
     }
 
     public float MotionSmoothing

@@ -16,16 +16,18 @@ public class HUDDefaultSettings : UdonSharpBehaviour
     [Tooltip("The higher the number, the quicker the movement.\nIf set to 20, motion smoothing will be disabled.")]
     [SerializeField, Range(0, 20)] private float defaultSmoothing = 18f;
 
-    void Start()
+    void Start() => ApplySettings();
+
+    private void ApplySettings()
     {
-        // Reset default smoothing if it's below zero (negative)
+        // Smoothing should never be below zero, so make sure it isn't
         if (defaultSmoothing < 0) defaultSmoothing = 0;
 
-        // Set the HUD's settings to the valeus
         hudAnimator.SetFloat("posX", defaultPosX);
         hudAnimator.SetFloat("posY", defaultPosY);
         hudAnimator.SetFloat("scale", defaultScale);
         hudAnimator.SetFloat("distance", defaultDistance);
         hudObject.MotionSmoothing = defaultSmoothing;
+        zLogger.Log(name, $"Default settings applied! posX = {hudAnimator.GetFloat("posX")} | posY = {hudAnimator.GetFloat("posY")} | scale = {hudAnimator.GetFloat("scale")} | distance = {hudAnimator.GetFloat("distance")}", LogColor.Lime, false);
     }
 }

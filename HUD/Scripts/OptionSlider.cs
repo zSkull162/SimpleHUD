@@ -20,6 +20,9 @@ public class OptionSlider : UdonSharpBehaviour
     [SerializeField] private HUDOption eventType;
     private UnityEngine.UI.Slider slider;
 
+    // Bool for the inspector
+    [HideInInspector] public bool infoGroup;
+
     private void Start()
     {
         slider = this.GetComponent<UnityEngine.UI.Slider>();
@@ -28,25 +31,23 @@ public class OptionSlider : UdonSharpBehaviour
 
     public void OnValueChanged()
     {
-        if (eventType == HUDOption.SetXPos)
+        switch (eventType)
         {
-            hudSettings.SetPosX(slider.value);
-        }
-        else if (eventType == HUDOption.SetYPos)
-        {
-            hudSettings.SetPosY(slider.value);
-        }
-        else if (eventType == HUDOption.SetDistance)
-        {
-            hudSettings.SetDistance(slider.value);
-        }
-        else if (eventType == HUDOption.SetSmooth)
-        {
-            hudSettings.SetSmoothing(Mathf.Abs(slider.value));
-        }
-        else
-        {
-            hudSettings.SetScale(slider.value);
+            case HUDOption.SetXPos:
+                hudSettings.SetPosX(slider.value);
+                break;
+            case HUDOption.SetYPos:
+                hudSettings.SetPosY(slider.value);
+                break;
+            case HUDOption.SetDistance:
+                hudSettings.SetDistance(slider.value);
+                break;
+            case HUDOption.SetScale:
+                hudSettings.SetScale(slider.value);
+                break;
+            case HUDOption.SetSmooth:
+                hudSettings.SetSmoothing(Mathf.Abs(slider.value));
+                break;
         }
     }
 }
