@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 256
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 1f39cd612b6f87349ba8c6e1a6f8f2ff, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 179f1a2089d04fa4aa03d108b7341d85: 21300000
+    - abd5cfa1d059b144d961dd3aa8a7e9e8: 21300000
+    - 80da0082d17267d488d0a1b0cc92d33c: 21300000
+    - 64f87be4618f2824880643428d0b5b1a: 21300000
+    - 4a601cb76c89ac54fa6b9dab70e8fd77: 21300000
+    - 36f3469f6eb0fb641a870383e6cd9e2e: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 179f1a2089d04fa4aa03d108b7341d85, type: 3}
+  - {fileID: 21300000, guid: abd5cfa1d059b144d961dd3aa8a7e9e8, type: 3}
+  - {fileID: 21300000, guid: 80da0082d17267d488d0a1b0cc92d33c, type: 3}
+  - {fileID: 21300000, guid: 64f87be4618f2824880643428d0b5b1a, type: 3}
+  - {fileID: 21300000, guid: 4a601cb76c89ac54fa6b9dab70e8fd77, type: 3}
+  - {fileID: 21300000, guid: 36f3469f6eb0fb641a870383e6cd9e2e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - UndoIcon
+  - Icon_Smoothing
+  - Icon_LeftRight
+  - Icon_Scale
+  - Icon_Distance
+  - Icon_FOV
+  m_RenderDataMap: {}
+  m_Tag: Atlas
+  m_IsVariant: 0

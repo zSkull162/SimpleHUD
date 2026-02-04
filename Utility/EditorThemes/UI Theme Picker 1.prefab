@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2691868190150534016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9136153153460513302}
+  - component: {fileID: 4886334990164824210}
+  m_Layer: 0
+  m_Name: UI Theme Picker 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9136153153460513302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691868190150534016}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4886334990164824210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691868190150534016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf4787edb32b7c42a52660fa881c530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  themeContainer: {fileID: 11400000, guid: 1b9dd4f669c3753419a7bdec6ee61ad1, type: 2}
+  customThemeContainer: {fileID: 0}
+  theme1:
+  - '#008080'
+  - '#38c194'
+  - '#31bdb6'
+  - '#2c99bc'
+  - '#3775bf'
+  theme2:
+  - '#008080'
+  - '#38c194'
+  - '#c2384c'
+  - '#c84183'
+  - '#cf59af'
+  theme3:
+  - '#1f61a3'
+  - '#9b419c'
+  - '#f5756a'
+  - '#ffa254'
+  - '#fee79b'
+  theme4:
+  - '#F5E3E0'
+  - '#E2A2AC'
+  - '#D2709C'
+  - '#A05A75'
+  - '#7E63A5'
+  theme5:
+  - '#994A46'
+  - '#C43D36'
+  - '#D8572A'
+  - '#DB7C26'
+  - '#F7B538'
+  custom1:
+    serializedVersion: 2
+    rgba: 4284520117
+  custom2:
+    serializedVersion: 2
+    rgba: 4285241773
+  custom3:
+    serializedVersion: 2
+    rgba: 4287144091
+  custom4:
+    serializedVersion: 2
+    rgba: 4288652684
+  custom5:
+    serializedVersion: 2
+    rgba: 4288652684
+  isThemeCustom: 0
+  useCustom: 1
+  preview: 1
