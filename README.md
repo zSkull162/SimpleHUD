@@ -15,11 +15,11 @@ In this package, I include prefabs for a simple version, and an "extra" version.
 
 The "simple" version of the HUD system includes the HUD canvas, and one parent object for the text. The "extra" version of the prefab includes top, bottom, left, and right side text parents. This can be seen in the [Preview video](https://youtu.be/gmYI42rgkzo) linked here and at the top of this ReadMe.
 
-### HUD System Simple menu (Outdated, not from v2.0):
-![Screenshot 2024-08-27 210037](https://github.com/user-attachments/assets/08740e27-6d7a-4321-80c0-da12624d427a)
+### HUD System Simple menu:
+<img width="995" height="1243" alt="Screenshot 2026-02-05 175529" src="https://github.com/user-attachments/assets/912d7ae8-9053-4090-a5da-f1a1e2c0ca28" />
 
-### HUD System Extra menu (Outdated, not from v2.0):
-![Screenshot 2024-08-27 211351](https://github.com/user-attachments/assets/74daf605-183b-43d2-a8e9-7a3875c218d1)
+### HUD System Extra menu:
+<img width="1706" height="1240" alt="Screenshot 2026-02-05 175553" src="https://github.com/user-attachments/assets/57f5cb85-cd3c-487e-8ea3-7415a5b7ef64" />
 
 By default, the HUD's options may not be what you prefer. To change the default values, enter playmode and select the object with the HUD Settings component in the hierarchy. Then, enable "Match default values to UI sliders," and mess with the UI sliders until the HUD looks good to you. Once the sliders are set, right click the HUD Settings component, select "Copy Component," exit playmode, right click the component again, and select "Paste Component As Values." This will copy the default values you set in playmode, and paste those values onto the component in edit mode, so that it saves.
 
